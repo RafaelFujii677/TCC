@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet1" targetNamespace="http://tempuri.org/DataSet1.xsd" xmlns:mstns="http://tempuri.org/DataSet1.xsd" xmlns="http://tempuri.org/DataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="triplice_PegasusMusicConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="triplice_PegasusMusicConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PegasusMusic.My.MySettings.GlobalReference.Default.triplice_PegasusMusicConnectionString" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="triplice_PegasusMusicConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="triplice_PegasusMusicConnectionString1 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PegasusMusic.My.MySettings.GlobalReference.Default.triplice_PegasusMusicConnectionString1" Provider="MySql.Data.MySqlClient" />
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="triplice_PegasusMusicConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="triplice_PegasusMusicConnectionString2 (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.PegasusMusic.My.MySettings.GlobalReference.Default.triplice_PegasusMusicConnectionString2" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="triplice_PegasusMusicConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillVenda" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataVenda" GeneratorSourceName="FillVenda" GetMethodModifier="Public" GetMethodName="GetDataVenda" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataVenda" UserSourceName="FillVenda">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        Vendas.id_Venda, RProduto_Venda.id_Venda AS Expr1, RProduto_Venda.id_RProduto_Venda, Funcionarios.nome_Funcionario, Funcionarios.id_Funcionario, Funcionarios.cpf_Funcionario, Clientes.id_Cliente, 
+                         Clientes.nome_Cliente, Clientes.cpf_Cliente, Produtos.id_Produto, Produtos.nome_Produto, Produtos.marca_Produto, Produtos.categoria_Produto, Produtos.sub_Categoria_Produto, Produtos.preco_Produto, 
+                         Produtos.descricao_Produto, Vendas.id_Funcionario_Venda, Vendas.id_Cliente_Venda, Vendas.sub_Total_Venda, Vendas.forma_Pagamento_Venda, Vendas.desconto_Venda, Vendas.total_Venda, Vendas.data_Venda, 
+                         Vendas.observacoes_Venda, RProduto_Venda.id_produto AS Expr2, RProduto_Venda.qnt_Produto
+FROM            RProduto_Venda INNER JOIN
+                         Vendas ON RProduto_Venda.id_Venda = Vendas.id_Venda INNER JOIN
+                         Funcionarios ON Vendas.id_Funcionario_Venda = Funcionarios.id_Funcionario INNER JOIN
+                         Clientes ON Vendas.id_Cliente_Venda = Clientes.id_Cliente INNER JOIN
+                         Produtos ON RProduto_Venda.id_produto = Produtos.id_Produto</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="id_Venda" DataSetColumn="id_Venda" />
+              <Mapping SourceColumn="Expr1" DataSetColumn="Expr1" />
+              <Mapping SourceColumn="id_RProduto_Venda" DataSetColumn="id_RProduto_Venda" />
+              <Mapping SourceColumn="nome_Funcionario" DataSetColumn="nome_Funcionario" />
+              <Mapping SourceColumn="id_Funcionario" DataSetColumn="id_Funcionario" />
+              <Mapping SourceColumn="cpf_Funcionario" DataSetColumn="cpf_Funcionario" />
+              <Mapping SourceColumn="id_Cliente" DataSetColumn="id_Cliente" />
+              <Mapping SourceColumn="nome_Cliente" DataSetColumn="nome_Cliente" />
+              <Mapping SourceColumn="cpf_Cliente" DataSetColumn="cpf_Cliente" />
+              <Mapping SourceColumn="id_Produto" DataSetColumn="id_Produto" />
+              <Mapping SourceColumn="nome_Produto" DataSetColumn="nome_Produto" />
+              <Mapping SourceColumn="marca_Produto" DataSetColumn="marca_Produto" />
+              <Mapping SourceColumn="categoria_Produto" DataSetColumn="categoria_Produto" />
+              <Mapping SourceColumn="sub_Categoria_Produto" DataSetColumn="sub_Categoria_Produto" />
+              <Mapping SourceColumn="preco_Produto" DataSetColumn="preco_Produto" />
+              <Mapping SourceColumn="descricao_Produto" DataSetColumn="descricao_Produto" />
+              <Mapping SourceColumn="id_Funcionario_Venda" DataSetColumn="id_Funcionario_Venda" />
+              <Mapping SourceColumn="id_Cliente_Venda" DataSetColumn="id_Cliente_Venda" />
+              <Mapping SourceColumn="sub_Total_Venda" DataSetColumn="sub_Total_Venda" />
+              <Mapping SourceColumn="forma_Pagamento_Venda" DataSetColumn="forma_Pagamento_Venda" />
+              <Mapping SourceColumn="desconto_Venda" DataSetColumn="desconto_Venda" />
+              <Mapping SourceColumn="total_Venda" DataSetColumn="total_Venda" />
+              <Mapping SourceColumn="data_Venda" DataSetColumn="data_Venda" />
+              <Mapping SourceColumn="observacoes_Venda" DataSetColumn="observacoes_Venda" />
+              <Mapping SourceColumn="Expr2" DataSetColumn="Expr2" />
+              <Mapping SourceColumn="qnt_Produto" DataSetColumn="qnt_Produto" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Total_ContaTableAdapter" GeneratorDataComponentClassName="Total_ContaTableAdapter" Name="Total_Conta" UserDataComponentName="Total_ContaTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="triplice_PegasusMusicConnectionString2 (MySettings)" DbObjectName="triplice_PegasusMusic.Total_Conta" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillTotalConta" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataTotalConta" GeneratorSourceName="FillTotalConta" GetMethodModifier="Public" GetMethodName="GetDataTotalConta" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataTotalConta" UserSourceName="FillTotalConta">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM `Total_Conta` WHERE (((@p1 = 1 AND `mes_Total` IS NULL) OR (`mes_Total` = @p2)) AND ((@p3 = 1 AND `ano_total` IS NULL) OR (`ano_total` = @p4)) AND ((@p5 = 1 AND `valor_Lucro_Prejuizo` IS NULL) OR (`valor_Lucro_Prejuizo` = @p6)) AND ((@p7 = 1 AND `situacao_Total` IS NULL) OR (`situacao_Total` = @p8)) AND (`id_Total` = @p9))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="mes_Total" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="mes_Total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ano_total" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ano_total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="valor_Lucro_Prejuizo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="valor_Lucro_Prejuizo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="situacao_Total" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="situacao_Total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_Total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO `Total_Conta` (`mes_Total`, `ano_total`, `valor_Lucro_Prejuizo`, `situacao_Total`) VALUES (@p1, @p2, @p3, @p4)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="mes_Total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ano_total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="valor_Lucro_Prejuizo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="situacao_Total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT mes_Total, ano_total, valor_Lucro_Prejuizo, situacao_Total, id_Total FROM Total_Conta</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE `Total_Conta` SET `mes_Total` = @p1, `ano_total` = @p2, `valor_Lucro_Prejuizo` = @p3, `situacao_Total` = @p4 WHERE (((@p5 = 1 AND `mes_Total` IS NULL) OR (`mes_Total` = @p6)) AND ((@p7 = 1 AND `ano_total` IS NULL) OR (`ano_total` = @p8)) AND ((@p9 = 1 AND `valor_Lucro_Prejuizo` IS NULL) OR (`valor_Lucro_Prejuizo` = @p10)) AND ((@p11 = 1 AND `situacao_Total` IS NULL) OR (`situacao_Total` = @p12)) AND (`id_Total` = @p13))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p1" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="mes_Total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p2" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ano_total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p3" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="valor_Lucro_Prejuizo" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p4" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="situacao_Total" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p5" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="mes_Total" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p6" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="mes_Total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p7" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ano_total" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p8" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="ano_total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p9" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="valor_Lucro_Prejuizo" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Double" Direction="Input" ParameterName="@p10" Precision="0" ProviderType="Double" Scale="0" Size="0" SourceColumn="valor_Lucro_Prejuizo" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p11" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="situacao_Total" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="StringFixedLength" Direction="Input" ParameterName="@p12" Precision="0" ProviderType="String" Scale="0" Size="0" SourceColumn="situacao_Total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@p13" Precision="0" ProviderType="Int32" Scale="0" Size="0" SourceColumn="id_Total" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="mes_Total" DataSetColumn="mes_Total" />
+              <Mapping SourceColumn="ano_total" DataSetColumn="ano_total" />
+              <Mapping SourceColumn="valor_Lucro_Prejuizo" DataSetColumn="valor_Lucro_Prejuizo" />
+              <Mapping SourceColumn="situacao_Total" DataSetColumn="situacao_Total" />
+              <Mapping SourceColumn="id_Total" DataSetColumn="id_Total" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="id_Venda" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Venda" msprop:Generator_ColumnPropNameInRow="id_Venda" msprop:Generator_ColumnPropNameInTable="id_VendaColumn" msprop:Generator_UserColumnName="id_Venda" type="xs:int" />
+              <xs:element name="Expr1" msprop:Generator_ColumnVarNameInTable="columnExpr1" msprop:Generator_ColumnPropNameInRow="Expr1" msprop:Generator_ColumnPropNameInTable="Expr1Column" msprop:Generator_UserColumnName="Expr1" type="xs:int" minOccurs="0" />
+              <xs:element name="id_RProduto_Venda" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_RProduto_Venda" msprop:Generator_ColumnPropNameInRow="id_RProduto_Venda" msprop:Generator_ColumnPropNameInTable="id_RProduto_VendaColumn" msprop:Generator_UserColumnName="id_RProduto_Venda" type="xs:int" />
+              <xs:element name="nome_Funcionario" msprop:Generator_ColumnVarNameInTable="columnnome_Funcionario" msprop:Generator_ColumnPropNameInRow="nome_Funcionario" msprop:Generator_ColumnPropNameInTable="nome_FuncionarioColumn" msprop:Generator_UserColumnName="nome_Funcionario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_Funcionario" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Funcionario" msprop:Generator_ColumnPropNameInRow="id_Funcionario" msprop:Generator_ColumnPropNameInTable="id_FuncionarioColumn" msprop:Generator_UserColumnName="id_Funcionario" type="xs:long" />
+              <xs:element name="cpf_Funcionario" msprop:Generator_ColumnVarNameInTable="columncpf_Funcionario" msprop:Generator_ColumnPropNameInRow="cpf_Funcionario" msprop:Generator_ColumnPropNameInTable="cpf_FuncionarioColumn" msprop:Generator_UserColumnName="cpf_Funcionario">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_Cliente" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Cliente" msprop:Generator_ColumnPropNameInRow="id_Cliente" msprop:Generator_ColumnPropNameInTable="id_ClienteColumn" msprop:Generator_UserColumnName="id_Cliente" type="xs:int" />
+              <xs:element name="nome_Cliente" msprop:Generator_ColumnVarNameInTable="columnnome_Cliente" msprop:Generator_ColumnPropNameInRow="nome_Cliente" msprop:Generator_ColumnPropNameInTable="nome_ClienteColumn" msprop:Generator_UserColumnName="nome_Cliente">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cpf_Cliente" msprop:Generator_ColumnVarNameInTable="columncpf_Cliente" msprop:Generator_ColumnPropNameInRow="cpf_Cliente" msprop:Generator_ColumnPropNameInTable="cpf_ClienteColumn" msprop:Generator_UserColumnName="cpf_Cliente" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_Produto" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Produto" msprop:Generator_ColumnPropNameInRow="id_Produto" msprop:Generator_ColumnPropNameInTable="id_ProdutoColumn" msprop:Generator_UserColumnName="id_Produto" type="xs:long" />
+              <xs:element name="nome_Produto" msprop:Generator_ColumnVarNameInTable="columnnome_Produto" msprop:Generator_ColumnPropNameInRow="nome_Produto" msprop:Generator_ColumnPropNameInTable="nome_ProdutoColumn" msprop:Generator_UserColumnName="nome_Produto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="marca_Produto" msprop:Generator_ColumnVarNameInTable="columnmarca_Produto" msprop:Generator_ColumnPropNameInRow="marca_Produto" msprop:Generator_ColumnPropNameInTable="marca_ProdutoColumn" msprop:Generator_UserColumnName="marca_Produto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="categoria_Produto" msprop:Generator_ColumnVarNameInTable="columncategoria_Produto" msprop:Generator_ColumnPropNameInRow="categoria_Produto" msprop:Generator_ColumnPropNameInTable="categoria_ProdutoColumn" msprop:Generator_UserColumnName="categoria_Produto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="sub_Categoria_Produto" msprop:Generator_ColumnVarNameInTable="columnsub_Categoria_Produto" msprop:Generator_ColumnPropNameInRow="sub_Categoria_Produto" msprop:Generator_ColumnPropNameInTable="sub_Categoria_ProdutoColumn" msprop:Generator_UserColumnName="sub_Categoria_Produto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="preco_Produto" msprop:Generator_ColumnVarNameInTable="columnpreco_Produto" msprop:Generator_ColumnPropNameInRow="preco_Produto" msprop:Generator_ColumnPropNameInTable="preco_ProdutoColumn" msprop:Generator_UserColumnName="preco_Produto" type="xs:double" minOccurs="0" />
+              <xs:element name="descricao_Produto" msprop:Generator_ColumnVarNameInTable="columndescricao_Produto" msprop:Generator_ColumnPropNameInRow="descricao_Produto" msprop:Generator_ColumnPropNameInTable="descricao_ProdutoColumn" msprop:Generator_UserColumnName="descricao_Produto" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="300" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_Funcionario_Venda" msprop:Generator_ColumnVarNameInTable="columnid_Funcionario_Venda" msprop:Generator_ColumnPropNameInRow="id_Funcionario_Venda" msprop:Generator_ColumnPropNameInTable="id_Funcionario_VendaColumn" msprop:Generator_UserColumnName="id_Funcionario_Venda" type="xs:int" minOccurs="0" />
+              <xs:element name="id_Cliente_Venda" msprop:Generator_ColumnVarNameInTable="columnid_Cliente_Venda" msprop:Generator_ColumnPropNameInRow="id_Cliente_Venda" msprop:Generator_ColumnPropNameInTable="id_Cliente_VendaColumn" msprop:Generator_UserColumnName="id_Cliente_Venda" type="xs:int" minOccurs="0" />
+              <xs:element name="sub_Total_Venda" msprop:Generator_ColumnVarNameInTable="columnsub_Total_Venda" msprop:Generator_ColumnPropNameInRow="sub_Total_Venda" msprop:Generator_ColumnPropNameInTable="sub_Total_VendaColumn" msprop:Generator_UserColumnName="sub_Total_Venda" type="xs:double" minOccurs="0" />
+              <xs:element name="forma_Pagamento_Venda" msprop:Generator_ColumnVarNameInTable="columnforma_Pagamento_Venda" msprop:Generator_ColumnPropNameInRow="forma_Pagamento_Venda" msprop:Generator_ColumnPropNameInTable="forma_Pagamento_VendaColumn" msprop:Generator_UserColumnName="forma_Pagamento_Venda" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="desconto_Venda" msprop:Generator_ColumnVarNameInTable="columndesconto_Venda" msprop:Generator_ColumnPropNameInRow="desconto_Venda" msprop:Generator_ColumnPropNameInTable="desconto_VendaColumn" msprop:Generator_UserColumnName="desconto_Venda" type="xs:double" minOccurs="0" />
+              <xs:element name="total_Venda" msprop:Generator_ColumnVarNameInTable="columntotal_Venda" msprop:Generator_ColumnPropNameInRow="total_Venda" msprop:Generator_ColumnPropNameInTable="total_VendaColumn" msprop:Generator_UserColumnName="total_Venda" type="xs:double" minOccurs="0" />
+              <xs:element name="data_Venda" msprop:Generator_ColumnVarNameInTable="columndata_Venda" msprop:Generator_ColumnPropNameInRow="data_Venda" msprop:Generator_ColumnPropNameInTable="data_VendaColumn" msprop:Generator_UserColumnName="data_Venda" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="observacoes_Venda" msprop:Generator_ColumnVarNameInTable="columnobservacoes_Venda" msprop:Generator_ColumnPropNameInRow="observacoes_Venda" msprop:Generator_ColumnPropNameInTable="observacoes_VendaColumn" msprop:Generator_UserColumnName="observacoes_Venda" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Expr2" msprop:Generator_ColumnVarNameInTable="columnExpr2" msprop:Generator_ColumnPropNameInRow="Expr2" msprop:Generator_ColumnPropNameInTable="Expr2Column" msprop:Generator_UserColumnName="Expr2" type="xs:int" minOccurs="0" />
+              <xs:element name="qnt_Produto" msprop:Generator_ColumnVarNameInTable="columnqnt_Produto" msprop:Generator_ColumnPropNameInRow="qnt_Produto" msprop:Generator_ColumnPropNameInTable="qnt_ProdutoColumn" msprop:Generator_UserColumnName="qnt_Produto" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Total_Conta" msprop:Generator_TableClassName="Total_ContaDataTable" msprop:Generator_TableVarName="tableTotal_Conta" msprop:Generator_RowChangedName="Total_ContaRowChanged" msprop:Generator_TablePropName="Total_Conta" msprop:Generator_RowDeletingName="Total_ContaRowDeleting" msprop:Generator_RowChangingName="Total_ContaRowChanging" msprop:Generator_RowEvHandlerName="Total_ContaRowChangeEventHandler" msprop:Generator_RowDeletedName="Total_ContaRowDeleted" msprop:Generator_RowClassName="Total_ContaRow" msprop:Generator_UserTableName="Total_Conta" msprop:Generator_RowEvArgName="Total_ContaRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mes_Total" msprop:Generator_ColumnVarNameInTable="columnmes_Total" msprop:Generator_ColumnPropNameInRow="mes_Total" msprop:Generator_ColumnPropNameInTable="mes_TotalColumn" msprop:Generator_UserColumnName="mes_Total" type="xs:int" minOccurs="0" />
+              <xs:element name="ano_total" msprop:Generator_ColumnVarNameInTable="columnano_total" msprop:Generator_ColumnPropNameInRow="ano_total" msprop:Generator_ColumnPropNameInTable="ano_totalColumn" msprop:Generator_UserColumnName="ano_total" type="xs:int" minOccurs="0" />
+              <xs:element name="valor_Lucro_Prejuizo" msprop:Generator_ColumnVarNameInTable="columnvalor_Lucro_Prejuizo" msprop:Generator_ColumnPropNameInRow="valor_Lucro_Prejuizo" msprop:Generator_ColumnPropNameInTable="valor_Lucro_PrejuizoColumn" msprop:Generator_UserColumnName="valor_Lucro_Prejuizo" type="xs:double" minOccurs="0" />
+              <xs:element name="situacao_Total" msprop:Generator_ColumnVarNameInTable="columnsituacao_Total" msprop:Generator_ColumnPropNameInRow="situacao_Total" msprop:Generator_ColumnPropNameInTable="situacao_TotalColumn" msprop:Generator_UserColumnName="situacao_Total" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="8" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="id_Total" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid_Total" msprop:Generator_ColumnPropNameInRow="id_Total" msprop:Generator_ColumnPropNameInTable="id_TotalColumn" msprop:Generator_UserColumnName="id_Total" type="xs:int" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:DataTable1" />
+      <xs:field xpath="mstns:id_Venda" />
+      <xs:field xpath="mstns:id_RProduto_Venda" />
+      <xs:field xpath="mstns:id_Funcionario" />
+      <xs:field xpath="mstns:id_Cliente" />
+      <xs:field xpath="mstns:id_Produto" />
+    </xs:unique>
+    <xs:unique name="Total_Conta_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:Total_Conta" />
+      <xs:field xpath="mstns:id_Total" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
