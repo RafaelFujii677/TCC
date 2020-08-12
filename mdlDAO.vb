@@ -1,7 +1,7 @@
 ﻿Imports MySql.Data.MySqlClient
 Imports System.IO
 Module mdlDAO
-    Public conexao As New MySqlConnection("SERVER=31.170.162.19;user id=triplice_admin; password=admin;database=triplice_PegasusMusic;")
+    Public conexao As New MySqlConnection("")
     Public comandao As New MySqlCommand
     Public adaptador As New MySqlDataAdapter
     Public cmdUser As New MySqlCommand
